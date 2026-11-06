@@ -1,0 +1,10 @@
+services:
+  website:
+    build: .
+    image: ab-motors-website:latest
+    container_name: ab-motors
+    ports:
+      - "8080:8080"        # host:container  ->  open http://localhost:8080
+    environment:
+      - PORT=8080
+    restart: unless-stopped

@@ -1,0 +1,9 @@
+# Render "Blueprint" - lets Render set up the service automatically from this repo
+services:
+  - type: web
+    name: ab-motors-website
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    autoDeploy: true
